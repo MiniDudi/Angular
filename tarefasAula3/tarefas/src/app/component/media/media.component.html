@@ -1,9 +1,13 @@
 <p>Calcular Media</p>
 <form #mediaForm="ngForm" (ngSubmit)="onSubmit(mediaForm)">
-    <input name="ac1" ngModel ><br>
-    <input name="ac2" ngModel><br>
-    <input name="af" ngModel><br>
-    <input name="ag" ngModel><br>
+    <label for="ac1">AC1: </label><br>
+    <input name="ac1" id="ac1" ngModel ><br><br>
+    <label for="ac2">AC2: </label><br>
+    <input name="ac2" id="ac2" ngModel><br><br>
+    <label for="af">AF: </label><br>
+    <input name="af" id="af" ngModel><br><br>
+    <label for="ag">AG: </label><br>
+    <input name="ag" id="ag" ngModel><br><br>
     <button type="submit">Submit</button>
 </form>
 <p>Valor final: {{ finalValue }}</p>

@@ -1,12 +1,19 @@
+<p>Calculadora</p>
 <form #calculadoraForm="ngForm" (ngSubmit)="onSubmit(calculadoraForm)">
-    <input name="primeiroNumero" ngModel ><br>
-    <select name="operacao" ngModel required>
+
+    <label for="first">Primeiro número: </label><br>
+    <input name="primeiroNumero" id="first" ngModel ><br><br>
+
+    <label for="opt">Operação: </label><br>
+    <select name="operacao" id="opt" ngModel required>
         <option value="soma">Soma</option>
         <option value="subtracao">Subtração</option>
         <option value="multiplicacao">Multiplicação</option>
         <option value="divisao">Divisão</option>
-    </select><br>
-    <input name="segundoNumero" ngModel><br>
+    </select><br><br>
+
+    <label for="segundoNumero">Segundo número: </label><br>
+    <input name="segundoNumero" id="segundoNumero" ngModel><br><br>
     <button>Submit</button>
 </form>
 <p>Form Value: {{ resultado }}</p>

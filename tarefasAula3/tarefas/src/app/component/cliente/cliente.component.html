@@ -1,29 +1,20 @@
+<p>Cadastrar Cliente</p>
 <form #clienteForm="ngForm" (ngSubmit)="onSubmit(clienteForm)">
-    <div>
-      <label for="id">ID:</label>
-      <input type="number" id="id" name="id" ngModel required>
-    </div>
-  
-    <div>
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" ngModel required>
-    </div>
-  
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" ngModel required>
-    </div>
-  
-    <div>
-      <label for="idade">Idade:</label>
-      <input type="number" id="idade" name="idade" ngModel required>
-    </div>
-  
-    <button type="submit">Cadastrar</button>
-  </form>
-  
-  <h3>Clientes Cadastrados:</h3>
-  <ul>
-    <li *ngFor="let cliente of clientes">{{ cliente.nome }}</li>
-  </ul>
-  
+
+  <label for="id">ID:</label><br>
+  <input type="number" id="id" name="id" ngModel required><br><br>
+
+  <label for="nome">Nome:</label><br>
+  <input type="text" id="nome" name="nome" ngModel required><br><br>
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" ngModel required><br><br>
+
+  <label for="idade">Idade:</label><br>
+  <input type="number" id="idade" name="idade" ngModel required><br><br>
+
+  <button type="submit">Cadastrar</button>
+</form>
+<ul>
+  <li *ngFor="let cliente of clientes">{{ cliente.nome }}</li>
+</ul>
