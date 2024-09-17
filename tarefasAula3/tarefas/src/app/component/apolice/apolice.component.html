@@ -1,0 +1,8 @@
+<form #apoliceForm="ngForm" (ngSubmit)="onSubmit(apoliceForm)">
+    <input name="first" ngModel ><br>
+    <input name="last" ngModel><br>
+    <button>Submit</button>
+</form>
+<br><br>
+<p>Form value: {{ apoliceForm.value.first }}</p>
+<p>Form valid: {{ apoliceForm.valid }}</p>
