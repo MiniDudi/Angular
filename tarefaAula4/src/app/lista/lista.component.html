@@ -2,7 +2,6 @@
     <ul>
         <li *ngFor="let item of tarefas; index as i" class="mb-3">
             <div>
-                <!-- Corrigido o [ngStyle] para passar um objeto -->
                 <p [ngStyle]="{'text-decoration': item.concluida ? 'line-through' : 'none'}">
                     {{item.descricao}}
                 </p>
