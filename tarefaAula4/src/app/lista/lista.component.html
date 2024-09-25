@@ -1,0 +1,27 @@
+<div>
+    <ul>
+        <li *ngFor="let item of tarefas; index as i" class="mb-3">
+            <div>
+                <!-- Corrigido o [ngStyle] para passar um objeto -->
+                <p [ngStyle]="{'text-decoration': item.concluida ? 'line-through' : 'none'}">
+                    {{item.descricao}}
+                </p>
+
+                <span *ngIf="item.concluida; else naoConcluidaTexto">Tarefa foi concluída com êxito</span>
+
+                <button *ngIf="item.concluida; else naoConcluidaBotao" (click)="ativar(item)" class="btn btn-secondary mx-3">
+                    Abrir tarefa
+                </button>
+            </div>
+
+            <ng-template #naoConcluidaTexto>
+                <span>Tarefa ainda não foi concluída</span>
+            </ng-template>
+            <ng-template #naoConcluidaBotao>
+                <button (click)="ativar(item)" class="btn btn-primary mx-3">
+                    Concluir tarefa
+                </button>
+            </ng-template>
+        </li>
+    </ul>
+</div>

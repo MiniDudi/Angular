@@ -1,0 +1,47 @@
+<!-- Início diretivas IF -->
+<div *ngIf="exibir; else outroConteudo">
+    <h1>Conteúdo Se for verdadeiro</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam odit reiciendis aut atque tenetur, suscipit
+        eius hic maxime autem minus quis natus culpa sapiente, sunt, explicabo asperiores incidunt architecto eveniet.
+        Harum eius facilis debitis possimus laudantium praesentium ducimus! Velit fugit quae libero officiis quibusdam
+        eveniet aliquam error, labore dicta consequuntur corporis dolores doloremque perferendis impedit id quasi,
+        repellendus eum excepturi!</p>
+</div>
+
+<ng-template #outroConteudo>
+    <div>
+        <h1> Outro Conteúdo </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae cum odio et quam ducimus adipisci
+            reprehenderit aspernatur accusamus, blanditiis sequi error quae qui beatae quasi expedita, esse laboriosam
+            dolor nulla!</p>
+    </div>
+</ng-template>
+<!-- Fim diretivas IF -->
+
+<!-- Início diretivas FOR -->
+<div>
+    <ul>
+        <li *ngFor="let item of items; index as i">{{item}}</li>
+    </ul>
+</div>
+<!-- Fim diretivas FOR -->
+
+<!-- Início diretivas SWITCH -->
+<div [ngSwitch]="tipoAutomovel">
+    <div *ngSwitchCase="'carro'">Foi selecionado Carro</div>
+    <div *ngSwitchCase="'moto'">Foi selecionado Moto</div>
+    <div *ngSwitchDefault>Conteúdo Padrão</div>
+</div>
+<!-- Fim diretivas SWITCH -->
+
+<!-- Início diretivas STYLE -->
+<div [ngStyle]="{'color': condicao?'blue':'red', 'background-color': cor}">
+    <p>Aqui vai o meu texto</p>
+</div>
+<!-- Fim diretivas STYLE -->
+
+<!-- Início diretivas CLASS -->
+<div [ngClass]="{'ativo': isActive, 'desativado': !isActive}">
+    <p>Testando ngClass</p>
+</div>
+<!-- Fim diretivas CLASS -->
