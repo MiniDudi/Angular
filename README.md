@@ -1,4 +1,4 @@
-# Angular
+# Angular - FACENS Desenvolvimento Web Front-end
 
-## Tarefa em andamento
-### Por favor não tirar nota antecipadamente <3
+### Eduardo Henrique Natividade Pinese
+### RA: 235182
