@@ -1,0 +1,19 @@
+<div class="container w-50">
+    <div>
+        <h1>Login</h1>
+    </div>
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+        <div class="form-group">
+            <label for="user">Usuário</label>
+            <input type="text" id="user" name="user" class="form-control" ngModel required>
+
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" class="form-control" ngModel required>
+
+            <div *ngIf="isLoginFailed" class="alert alert-danger mt-2">
+                Usuário ou senha incorretos.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Entrar</button>
+    </form>
+</div>

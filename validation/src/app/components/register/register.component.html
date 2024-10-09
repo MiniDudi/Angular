@@ -1,0 +1,25 @@
+<div class="container w-50">
+    <div>
+        <h1>Cadastrar</h1>
+    </div>
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+        <div class="form-group">
+            <label for="user">Usuário</label>
+            <input type="text" id="user" name="user" class="form-control" ngModel required>
+
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" class="form-control" ngModel required min="6" max="20">
+
+            <label for="passwordConfirmation">Confirmar senha</label>
+            <input type="passwordConfirmation" id="passwordConfirmation" name="passwordConfirmation"
+                class="form-control" ngModel required min="6" max="20">
+
+            <div *ngIf="submitted" class="alert alert-success mt-2">
+                Usuário criado com sucesso!
+                User: {{ user }}
+                Password: {{ password }}
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>

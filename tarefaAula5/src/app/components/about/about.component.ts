@@ -15,4 +15,8 @@ export class AboutComponent {
     this.nameParam = this.router.snapshot.params['name'];
   }
 
+  ngOnInit() {
+    
+  }
+
 }
