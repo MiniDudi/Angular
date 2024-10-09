@@ -13,8 +13,12 @@ export class RegisterComponent {
   password!: String;
 
   onSubmit(form: NgForm) {
-    this.submitted = true;
-    this.user = form.value.user;
-    this.password = form.value.password;
+    if( form.value.user && form.value.password) {
+      this.submitted = true;
+      this.user = form.value.user;
+      this.password = form.value.password;
+    } else {
+      this.submitted = false;
+    }
   }
 }

@@ -6,18 +6,28 @@
         <div class="form-group">
             <label for="user">Usuário</label>
             <input type="text" id="user" name="user" class="form-control" ngModel required>
+            <div *ngIf="myForm.submitted && !myForm.controls['user']?.valid" class="alert alert-danger mt-2">
+                O campo usuário é obrigatório.
+            </div>
 
             <label for="password">Senha</label>
-            <input type="password" id="password" name="password" class="form-control" ngModel required min="6" max="20">
+            <input type="password" id="password" name="password" class="form-control" ngModel required>
+            <div *ngIf="myForm.submitted && !myForm.controls['password']?.valid" class="alert alert-danger mt-2">
+                O campo senha é obrigatório.
+            </div>
 
             <label for="passwordConfirmation">Confirmar senha</label>
-            <input type="passwordConfirmation" id="passwordConfirmation" name="passwordConfirmation"
-                class="form-control" ngModel required min="6" max="20">
+            <input type="password" id="passwordConfirmation" name="passwordConfirmation" class="form-control" ngModel
+                required>
+            <div *ngIf="myForm.submitted && !myForm.controls['passwordConfirmation']?.valid"
+                class="alert alert-danger mt-2">
+                O campo de confirmação de senha é obrigatório.
+            </div>
 
             <div *ngIf="submitted" class="alert alert-success mt-2">
                 Usuário criado com sucesso!
-                User: {{ user }}
-                Password: {{ password }}
+                user: {{ user}}
+                password: {{ password }}
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
