@@ -1,0 +1,52 @@
+<p>Aluno works!</p>
+
+<!-- Formulário para buscar aluno por id -->
+<form #form="ngForm" (ngSubmit)="getAlunoById(form)">
+    <label for="id">ID do Aluno:</label>
+    <input type="text" id="id" name="id" ngModel>
+    <button type="submit">Buscar</button>
+</form>
+
+<br><br>
+
+<!-- Formulário para cadastrar aluno -->
+<form #formCadastrar="ngForm" (ngSubmit)="cadastrarAluno(formCadastrar)">
+    <label for="nome">Nome do Aluno:</label>
+    <input type="text" id="nome" name="nome" ngModel>
+    
+    <label for="idade">Idade:</label>
+    <input type="text" id="idade" name="idade" ngModel>
+    
+    <label for="ra">RA do Aluno:</label>
+    <input type="text" id="ra" name="ra" ngModel>
+
+    <button type="submit">Cadastrar</button>
+</form>
+
+<br>
+
+<!-- Formulário para apagar aluno por id -->
+<form #formApagar="ngForm" (ngSubmit)="apagarAluno(formApagar)">
+    <label for="idApagar">ID do Aluno para apagar:</label>
+    <input type="text" id="idApagar" name="id" ngModel>
+    <button type="submit">Apagar</button>
+</form>
+
+<br><br>
+
+<!-- Formulário para editar aluno -->
+<form #formEditar="ngForm" (ngSubmit)="editarAluno(formEditar)">
+    <label for="idEditar">ID do Aluno:</label>
+    <input type="text" id="idEditar" name="id" ngModel>
+
+    <label for="nomeEditar">Nome do Aluno:</label>
+    <input type="text" id="nomeEditar" name="nome" ngModel>
+
+    <label for="idadeEditar">Idade:</label>
+    <input type="text" id="idadeEditar" name="idade" ngModel>
+
+    <label for="raEditar">RA do Aluno:</label>
+    <input type="text" id="raEditar" name="ra" ngModel>
+
+    <button type="submit">Editar</button>
+</form>

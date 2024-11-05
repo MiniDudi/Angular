@@ -1,0 +1,28 @@
+{
+    "aluno": [
+        {
+            "id": "1",
+            "nome": "João Silva",
+            "idade": 20,
+            "ra": "123456"
+        },
+        {
+            "id": "2",
+            "nome": "Maria Oliveira",
+            "idade": 22,
+            "ra": "654321"
+        },
+        {
+            "id": "3",
+            "nome": "Carlos Souza",
+            "idade": 23,
+            "ra": "112233"
+        },
+        {
+            "id": "4",
+            "nome": "Ana Santos",
+            "idade": 21,
+            "ra": "445566"
+        }
+    ]
+}
