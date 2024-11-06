@@ -12,7 +12,7 @@ export class AlunoService {
   constructor(private http: HttpClient) { }
 
   obterAlunos():Observable<Aluno[]> {
-    return this.http.get<Aluno[]>(`${this.API_URL}/alunos`);
+    return this.http.get<Aluno[]>(`${this.API_URL}/aluno`);
   }
 
   obterAlunoPorId(id: number):Observable<Aluno> {
@@ -20,14 +20,14 @@ export class AlunoService {
   }
 
   salvarAluno(produto: Aluno):Observable<Aluno> {
-    return this.http.post<Aluno>(`${this.API_URL}/alunos/`, produto);
+    return this.http.post<Aluno>(`${this.API_URL}/aluno/`, produto);
   }
 
   editarAluno(produto: Aluno):Observable<Aluno> {
-    return this.http.put<Aluno>(`${this.API_URL}/alunos/${produto.id}`, produto);
+    return this.http.put<Aluno>(`${this.API_URL}/aluno/${produto.id}`, produto);
   }
 
   excluirAluno(produto: Aluno):Observable<Aluno> {
-    return this.http.delete<Aluno>(`${this.API_URL}/alunos/${produto.id}`);
+    return this.http.delete<Aluno>(`${this.API_URL}/aluno/${produto.id}`);
   }
 }
